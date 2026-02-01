@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SemScore - Result Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>SemScore Calculator</h1>
+    <p class="sub">1st Semester Marks + SGPA Result Calculator</p>
+
+    <div class="card">
+      <h2>Student Details</h2>
+      <div class="grid">
+        <div>
+          <label>Student Name</label>
+          <input type="text" id="name" placeholder="Enter your name" />
+        </div>
+        <div>
+          <label>Roll No</label>
+          <input type="text" id="roll" placeholder="Enter roll number" />
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Enter Marks</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Subject</th>
+            <th>Paper Marks</th>
+            <th>Viva Marks</th>
+            <th>Total Out Of</th>
+          </tr>
+        </thead>
+        <tbody id="marksBody"></tbody>
+      </table>
+
+      <button class="btn" onclick="calculateResult()">Calculate Result</button>
+      <button class="btn secondary" onclick="resetForm()">Reset</button>
+    </div>
+
+    <div class="card result" id="resultCard" style="display:none;">
+      <h2>📄 Result</h2>
+      <p><b>Name:</b> <span id="rName"></span></p>
+      <p><b>Roll No:</b> <span id="rRoll"></span></p>
+
+      <div class="summary">
+        <div class="box">
+          <h3>Total Marks</h3>
+          <p id="totalMarks"></p>
+        </div>
+        <div class="box">
+          <h3>Percentage</h3>
+          <p id="percentage"></p>
+        </div>
+        <div class="box">
+          <h3>Grade</h3>
+          <p id="grade"></p>
+        </div>
+        <div class="box">
+          <h3>SGPA (Estimate)</h3>
+          <p id="sgpa"></p>
+        </div>
+      </div>
+
+      <h3>Status: <span id="status"></span></h3>
+    </div>
+
+    <footer>
+      Made by Piyush | SemScore Project
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
